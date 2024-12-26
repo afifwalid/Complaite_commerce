@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج الشكاوى</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            background-color: #f3f3f3;
+            margin: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>الجمهورية الجزائرية الديمقراطية الشعبية</h1>
+        <h2>وزارة التجارة الداخلية وضبط السوق الوطنية</h2>
+    </header>
+    <form action="send_email.php" method="POST">
+        <label for="name">الاسم واللقب</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="phone">رقم الهاتف</label>
+        <input id="phone" name="phone" type="text" required>
+
+        <label for="email">البريد الإلكتروني</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="state">الولاية</label>
+        <select id="state" name="state" required>
+            <option value="Adrar">أدرار</option>
+            <option value="Chlef">الشلف</option>
+            <option value="Laghouat">الأغواط</option>
+            <!-- Add more states here -->
+        </select>
+
+        <label for="municipality">البلدية</label>
+        <input id="municipality" name="municipality" type="text" required>
+
+        <label for="merchantName">اسم التاجر</label>
+        <input id="merchantName" name="merchantName" type="text" required>
+
+        <label for="merchantAddress">عنوان التاجر</label>
+        <input id="merchantAddress" name="merchantAddress" type="text" required>
+
+        <label for="complaint">وصف الشكوى</label>
+        <textarea id="complaint" name="complaint" required></textarea>
+
+        <button type="submit">إرسال</button>
+    </form>
+</body>
+</html>
